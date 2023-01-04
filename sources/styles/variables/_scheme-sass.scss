@@ -1,0 +1,6 @@
+@use 'sass:color';
+
+$scheme: #0364ed;
+$scheme-dark: color.adjust($scheme, $lightness: -10%);
+$scheme-light: color.adjust($scheme, $lightness: 10%);
+$scheme-opacity-50: color.change($scheme, $alpha: .5);

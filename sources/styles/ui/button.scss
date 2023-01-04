@@ -1,0 +1,164 @@
+@use 'sass:color';
+
+$name: 'ui-button' !default;
+
+$scheme: #181818 !default;
+$scheme-contrast: #fff !default;
+$scheme-dark: color.adjust($scheme, $lightness: -10%) !default;
+$scheme-light: color.adjust($scheme, $lightness: 10%) !default;
+$scheme-transparent: color.change($scheme, $alpha: .5) !default;
+
+$display: inline-flex !default;
+$justify-content: center !default;
+
+$font-family: inherit !default;
+$font-size: 1rem !default;
+$font-size-small: .75rem !default;
+$font-size-large: 1.25rem !default;
+$font-weight: 500 !default;
+$line-height: 1.5 !default;
+$text-align: center !default;
+
+$padding-x: 1rem !default;
+$padding-x-large: 1.25rem !default;
+$padding-x-small: .75rem !default;
+$padding-y: .5rem !default;
+$padding-y-large: .75rem !default;
+$padding-y-small: .25rem !default;
+
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-radius: 2px !default;
+
+$shadow-shape: #{0 0 0 0} !default;
+$shadow-shape-active: #{0 0 0 0} !default;
+$shadow-shape-disabled: #{0 0 0 0} !default;
+$shadow-shape-focus: #{0 0 0 .2rem} !default;
+$shadow-shape-hover: #{0 0 0 0} !default;
+
+$appearance: none !default;
+$cursor: pointer !default;
+$cursor-disabled: default !default;
+$user-select: none !default;
+
+$transition-properties: #{color, background-color, border-color, box-shadow} !default;
+$transition-duration: #{.2s, .2s, .2s, .2s} !default;
+$transition-function: #{ease-in-out, ease-in-out, ease-in-out, ease-in-out} !default;
+
+$opacity-disabled: .65 !default;
+
+.#{$name} {
+    --scheme: #{$scheme};
+    --scheme-contrast: #{$scheme-contrast};
+    --scheme-dark: #{$scheme-dark};
+    --scheme-light: #{$scheme-light};
+    --scheme-transparent: #{$scheme-transparent};
+
+    --color: var(--scheme-contrast);
+    --color-active: var(--scheme-contrast);
+    --color-disabled: var(--scheme-contrast);
+    --color-focus: var(--scheme-contrast);
+    --color-hover: var(--scheme-contrast);
+
+    --padding-x: #{$padding-x};
+    --padding-y: #{$padding-y};
+
+    --background-color: var(--scheme);
+    --background-color-active: var(--scheme-dark);
+    --background-color-disabled: var(--scheme-dark);
+    --background-color-focus: var(--scheme-light);
+    --background-color-hover: var(--scheme-light);
+
+    --border-color: var(--scheme);
+    --border-color-active: var(--scheme-dark);
+    --border-color-disabled: var(--scheme-dark);
+    --border-color-focus: var(--scheme-light);
+    --border-color-hover: var(--scheme-light);
+    --border-radius: #{$border-radius};
+
+    --shadow-shape: #{$shadow-shape};
+    --shadow-shape-active: #{$shadow-shape-active};
+    --shadow-shape-disabled: #{$shadow-shape-disabled};
+    --shadow-shape-focus: #{$shadow-shape-focus};
+    --shadow-shape-hover: #{$shadow-shape-hover};
+    --shadow-rgb: var(--scheme-transparent);
+    --shadow-rgb-active: var(--scheme-transparent);
+    --shadow-rgb-focus: var(--scheme-transparent);
+    --shadow-rgb-hover: var(--scheme-transparent);
+
+    display: #{$display};
+    justify-content: #{$justify-content};
+    font-family: #{$font-family};
+    font-size: #{$font-size};
+    font-weight: #{$font-weight};
+    line-height: #{$line-height};
+    color: var(--color);
+    text-align: #{$text-align};
+    margin: 0;
+    padding: var(--padding-y) var(--padding-x);
+    background-color: var(--background-color);
+    border: #{$border-width} #{$border-style} var(--border-color);
+    border-radius: var(--border-radius);
+    appearance: #{$appearance};
+    cursor: #{$cursor};
+    user-select: #{$user-select};
+    transition-property: #{$transition-properties};
+    transition-duration: #{$transition-duration};
+    transition-timing-function: #{$transition-function};
+
+    &:hover {
+        color: var(--color-hover);
+        background-color: var(--background-color-hover);
+        border-color: var(--border-color-hover);
+        box-shadow: var(--shadow-shape-hover) var(--shadow-rgb-hover);
+    }
+    &:focus {
+        outline: none;
+    }
+    &:focus-visible {
+        color: var(--color-focus);
+        background-color: var(--background-color-focus);
+        border-color: var(--border-color-focus);
+        box-shadow: var(--shadow-shape-focus) var(--shadow-rgb-focus);
+        outline: none;
+    }
+    &:active {
+        color: var(--color-active);
+        background-color: var(--background-color-active);
+        border-color: var(--border-color-active);
+        box-shadow: var(--shadow-shape-active) var(--shadow-rgb-active);
+    }
+    &:disabled {
+        color: var(--color-disabled);
+        background-color: var(--background-color-disabled);
+        border-color: var(--border-color-disabled);
+        box-shadow: var(--shadow-shape-disabled);
+        opacity: #{$opacity-disabled};
+        cursor: #{$cursor-disabled};
+    }
+
+    &-transparent {
+        color: var(--scheme);
+        background-color: transparent;
+
+        &:disabled {
+            color: var(--scheme);
+            background-color: transparent;
+        }
+    }
+    &-wide {
+        width: 100%;
+    }
+    &-large {
+        --padding-x: #{$padding-x-large};
+        --padding-y: #{$padding-y-large};
+
+        font-size: #{$font-size-large};
+    }
+    &-small {
+        --padding-x: #{$padding-x-small};
+        --padding-y: #{$padding-y-small};
+
+        font-size: #{$font-size-small};
+    }
+}

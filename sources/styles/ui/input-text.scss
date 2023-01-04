@@ -1,0 +1,71 @@
+@use 'sass:color';
+@use '../variables/scheme-css' as global;
+
+$name: 'ui-input-text';
+
+$scheme: #181818 !default;
+$scheme-dark: color.adjust($scheme, $lightness: -10%) !default;
+$scheme-light: color.adjust($scheme, $lightness: 10%) !default;
+$scheme-opacity-50: color.change($scheme, $alpha: .5) !default;
+
+$padding-top: .5rem;
+$padding-left: 1rem;
+$padding-right: 1rem;
+$padding-bottom: .5rem;
+
+$padding-x: 1rem;
+$padding-y: .5rem;
+
+$font-size: 1rem;
+$font-weight: 400;
+$line-height: 1.5;
+
+$border-style: solid;
+$border-width: 1px;
+$border-radius: 2px;
+
+.#{$name} {
+    --scheme: #{$scheme};
+    --scheme-dark: #{$scheme-dark};
+    --scheme-light: #{$scheme-light};
+    --scheme-opacity-50: #{$scheme-opacity-50};
+
+    --color: #{$scheme};
+    --color-hover: #{$scheme};
+    --color-focus: #{$scheme};
+    --color-active: #{$scheme};
+    --color-transition-duration: .4s;
+
+    --padding-x: #{$padding-x};
+    --padding-y: #{$padding-y};
+
+    --border-color: var(--scheme);
+    --border-color-hover: var(--scheme-light);
+    --border-color-focus: var(--scheme-dark);
+    --border-color-transition-duration: .4s;
+    --border-radius: #{$border-radius};
+
+    --box-shadow: 0 0 0 .2rem var(--scheme-opacity-50);
+
+    display: block;
+    padding: var(--padding-y) var(--padding-x);
+    font: inherit;
+    font-size: #{$font-size};
+    font-weight: #{$font-weight};
+    line-height: #{$line-height};
+    color: var(--color);
+    border: #{$border-width} #{$border-style} var(--border-color);
+    border-radius: var(--border-radius);
+    appearance: none;
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: .15s, .15s, .15s, .15s;
+
+    &:hover {
+        border-color: var(--border-color-hover);
+    }
+    &:focus {
+        border-color: var(--border-color-focus);
+        box-shadow: var(--box-shadow);
+        outline: none;
+    }
+}

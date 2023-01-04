@@ -1,0 +1,10 @@
+//@forward '../ui/button' as button-*;
+@use '../ui/button.scss' as button with(
+    $scheme: var(--global-scheme),
+    $scheme-dark: var(--global-scheme-dark),
+    $scheme-light: var(--global-scheme-light),
+    $scheme-transparent: var(--global-scheme-transparent),
+    $border-radius: var(--global-border-radius)
+);
+@forward '../ui/input.scss' as input-*;
+@forward '../ui/input-text' as input-text-*;

@@ -1,0 +1,218 @@
+/*!**************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2.use[1]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2.use[2]!./sources/styles/application.scss ***!
+  \**************************************************************************************************************************************************************************/
+:root {
+  --global-width: 1300px;
+  --global-scheme: #0364ed;
+  --global-scheme-dark: #024fbb;
+  --global-scheme-light: #277ffc;
+  --global-scheme-transparent: rgba(3, 100, 237, 0.5);
+  --global-border-radius: 2px;
+  --new-1: #EAE7DC;
+  --new-2: #D8C3A5;
+  --new-3: #8E8D8A;
+  --new-4: #E98074;
+  --new-5: #E85A4F;
+}
+
+html {
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+}
+
+.layout {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-header {
+  z-index: 1;
+  background-color: #8E8D8A;
+  min-height: 100px;
+}
+
+.layout-content {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1364px;
+  margin: auto;
+  z-index: 2;
+}
+
+.layout-footer {
+  z-index: 3;
+  background-color: #181818;
+  min-height: 100px;
+}
+
+.ui-button {
+  --scheme: var(--global-scheme);
+  --scheme-contrast: #fff;
+  --scheme-dark: var(--global-scheme-dark);
+  --scheme-light: var(--global-scheme-light);
+  --scheme-transparent: var(--global-scheme-transparent);
+  --color: var(--scheme-contrast);
+  --color-active: var(--scheme-contrast);
+  --color-disabled: var(--scheme-contrast);
+  --color-focus: var(--scheme-contrast);
+  --color-hover: var(--scheme-contrast);
+  --padding-x: 1rem;
+  --padding-y: 0.5rem;
+  --background-color: var(--scheme);
+  --background-color-active: var(--scheme-dark);
+  --background-color-disabled: var(--scheme-dark);
+  --background-color-focus: var(--scheme-light);
+  --background-color-hover: var(--scheme-light);
+  --border-color: var(--scheme);
+  --border-color-active: var(--scheme-dark);
+  --border-color-disabled: var(--scheme-dark);
+  --border-color-focus: var(--scheme-light);
+  --border-color-hover: var(--scheme-light);
+  --border-radius: var(--global-border-radius);
+  --shadow-shape: 0 0 0 0;
+  --shadow-shape-active: 0 0 0 0;
+  --shadow-shape-disabled: 0 0 0 0;
+  --shadow-shape-focus: 0 0 0 0.2rem;
+  --shadow-shape-hover: 0 0 0 0;
+  --shadow-rgb: var(--scheme-transparent);
+  --shadow-rgb-active: var(--scheme-transparent);
+  --shadow-rgb-focus: var(--scheme-transparent);
+  --shadow-rgb-hover: var(--scheme-transparent);
+  display: inline-flex;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color);
+  text-align: center;
+  margin: 0;
+  padding: var(--padding-y) var(--padding-x);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+}
+
+.ui-button:hover {
+  color: var(--color-hover);
+  background-color: var(--background-color-hover);
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-shape-hover) var(--shadow-rgb-hover);
+}
+
+.ui-button:focus {
+  outline: none;
+}
+
+.ui-button:focus-visible {
+  color: var(--color-focus);
+  background-color: var(--background-color-focus);
+  border-color: var(--border-color-focus);
+  box-shadow: var(--shadow-shape-focus) var(--shadow-rgb-focus);
+  outline: none;
+}
+
+.ui-button:active {
+  color: var(--color-active);
+  background-color: var(--background-color-active);
+  border-color: var(--border-color-active);
+  box-shadow: var(--shadow-shape-active) var(--shadow-rgb-active);
+}
+
+.ui-button:disabled {
+  color: var(--color-disabled);
+  background-color: var(--background-color-disabled);
+  border-color: var(--border-color-disabled);
+  box-shadow: var(--shadow-shape-disabled);
+  opacity: 0.65;
+  cursor: default;
+}
+
+.ui-button-transparent {
+  color: var(--scheme);
+  background-color: transparent;
+}
+
+.ui-button-transparent:disabled {
+  color: var(--scheme);
+  background-color: transparent;
+}
+
+.ui-button-wide {
+  width: 100%;
+}
+
+.ui-button-large {
+  --padding-x: 1.25rem;
+  --padding-y: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.ui-button-small {
+  --padding-x: 0.75rem;
+  --padding-y: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.ui-input {
+  --title-margin: 8px;
+}
+
+.ui-input-title {
+  margin-bottom: var(--title-margin);
+}
+
+.ui-input-text {
+  --scheme: #181818;
+  --scheme-dark: black;
+  --scheme-light: #323232;
+  --scheme-opacity-50: rgba(24, 24, 24, 0.5);
+  --color: #181818;
+  --color-hover: #181818;
+  --color-focus: #181818;
+  --color-active: #181818;
+  --color-transition-duration: .4s;
+  --padding-x: 1rem;
+  --padding-y: 0.5rem;
+  --border-color: var(--scheme);
+  --border-color-hover: var(--scheme-light);
+  --border-color-focus: var(--scheme-dark);
+  --border-color-transition-duration: .4s;
+  --border-radius: 2px;
+  --box-shadow: 0 0 0 .2rem var(--scheme-opacity-50);
+  display: block;
+  padding: var(--padding-y) var(--padding-x);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  appearance: none;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+}
+
+.ui-input-text:hover {
+  border-color: var(--border-color-hover);
+}
+
+.ui-input-text:focus {
+  border-color: var(--border-color-focus);
+  box-shadow: var(--box-shadow);
+  outline: none;
+}

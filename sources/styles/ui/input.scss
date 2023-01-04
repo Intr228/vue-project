@@ -1,0 +1,10 @@
+$name: 'ui-input';
+$title-margin: 8px;
+
+.#{$name} {
+    --title-margin: #{$title-margin};
+
+    &-title {
+        margin-bottom: var(--title-margin);
+    }
+}

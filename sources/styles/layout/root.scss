@@ -1,0 +1,16 @@
+@use '../variables/scheme-sass' as scheme;
+
+:root {
+    --global-width: 1300px;
+    --global-scheme: #{scheme.$scheme};
+    --global-scheme-dark: #{scheme.$scheme-dark};
+    --global-scheme-light: #{scheme.$scheme-light};
+    --global-scheme-transparent: #{scheme.$scheme-opacity-50};
+    --global-border-radius: 2px;
+
+    --new-1: #EAE7DC;
+    --new-2: #D8C3A5;
+    --new-3: #8E8D8A;
+    --new-4: #E98074;
+    --new-5: #E85A4F;
+}
